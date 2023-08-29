@@ -11,7 +11,7 @@ let Player = mongoose.model("Player", new Schema({
     title : String,
     power : String
 }));
-let dburl = "mongodb+srv://ranjeetsyadav40:KrRCqIsuFwrFdOHu@sportz.0hqyrx5.mongodb.net/?retryWrites=true&w=majority"
+let dburl = "mongodb+srv://ranjeetsyadav40:<password>sportz.<api-key>.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(dburl)
 .then( res => console.log("DB Connected"))
 
