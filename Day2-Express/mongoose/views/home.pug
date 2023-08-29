@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        h1 Hello from Home | PUG Template
+        h2 #{ company }
+        form( action="#" method="post" )
+            label( for="nhero" ) New Hero 
+            input(id="nhero" name="nhero" type="text" )
+            button(type="submit") Add New Hero 
+        each hero in heroes
+            li #{hero}

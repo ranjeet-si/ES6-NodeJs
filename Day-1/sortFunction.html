@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var favNum = [56, 63, 67, 29, 28, 92];
+
+      function sortFun(num1, num2) {
+        if (num1 > num2) {
+          return 1;
+        } else if (num1 < num2) {
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+
+      console.log(favNum.sort(sortFun));
+      const heading = document.getElementsByTagName("h1");
+
+      heading[0].textContent = favNum;
+    </script>
+  </head>
+  <body>
+    <h></h>
+  </body>
+</html>

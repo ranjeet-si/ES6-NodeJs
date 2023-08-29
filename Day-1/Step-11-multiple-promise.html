@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let firstPromise = function () {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("resolve the promise");
+            } else {
+              reject("reject error from promise");
+            }
+          }, 1000);
+        });
+      };
+
+      let secondPromise = function () {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (false) {
+              resolve("resolve the promise");
+            } else {
+              reject("reject error from promise");
+            }
+          }, 3000);
+        });
+      };
+      let thirddPromise = function () {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("resolve the promise");
+            } else {
+              reject("reject error from promise");
+            }
+          }, 4000);
+        });
+      };
+//all ,any, race
+//all-- expect all the promise to resolve
+//any-- expect any the promise to resolve
+//race-- expect race the promise to resolve
+      Promise.any([firstPromise(), secondPromise(), thirddPromise()])
+        .then(function (res) {
+          console.log("Respose", res);
+        })
+        .catch(function (err) {
+          console.log("Error", err);
+        })
+        .finally(function () {
+          console.log("promise is complete");
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

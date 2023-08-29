@@ -1,0 +1,17 @@
+{
+  "name": "mongodb-connection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dbc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ranjeet",
+  "license": "ISC",
+  "dependencies": {
+    "expess": "^0.0.1-security",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.4",
+    "nodemon": "^3.0.1"
+  }
+}

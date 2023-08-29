@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var favNum = [56, 63, 67, 29, 28, 92];
+
+      for (let i = 0; i < favNum.length; i++) {
+        console.log(favNum[i]);
+      }
+
+      //   favNum.forEach(function(val,idx,arr){
+      //     console.log(val)
+      //   })
+
+      //   favNum.forEach( val => console.log(val))
+
+      // var doubleFavNums = favNum.map(function(val,idx, arr){
+      //     return val * 2
+      // });
+
+      var doubleFavNums = favNum.map((val, idx, arr) => {
+        return val * 2;
+      });
+
+      var evenNumber = favNum.filter((val) => val % 2 == 0);
+
+      let totalSum = favNum.reduce((initVal, val, idx, arr) => {
+        return initVal + val;
+      },0);
+
+      console.log(favNum);
+      console.log(doubleFavNums);
+      console.log(evenNumber);
+      console.log(totalSum);
+    </script>
+  </head>
+  <body></body>
+</html>

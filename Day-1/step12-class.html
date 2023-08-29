@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    public properties
+    public methods
+    private properties
+    private methods
+    static properties
+    static methods
+
+    */
+   class Person{
+    canwalk = "default";
+    constructor(pcw){
+        this.canwalk=pcw;
+    }
+   }
+
+   class Hero extends Person{
+    // public properties
+    title = "Ironman"
+    firstname = "tony"
+    lastname = "stark"
+    //private properties
+    #power =5
+
+    static version =1001;
+
+    constructor(htitle, hframe, hlname, hcw){
+
+        super(hcw)
+        this.title = htitle;
+        this.firstname=hframe;
+        this.lastname=hlname
+        
+    }
+    // public methods
+    fullname(){
+        return this.firstname + this.lastname
+    }
+
+    #saypower(){
+
+    }
+    get power(){
+      return this.#power
+    }
+    set power(npower){
+    this.#power =npower
+    }
+
+   }
+   let hero = new Hero("Batman", "Bruce", "Wayne","I can fly");
+   console.log(hero.title)
+   console.log(hero.canwalk)
+   console.log(hero.fullname())
+   console.log(hero.power)
+   hero.power =10;
+   console.log(Hero.version);
+</script>
+
+
+<body>
+    
+</body>
+</html>

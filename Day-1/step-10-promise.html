@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var arr =  [13,32,64,72,10,13,8,101,37,18,11,9,12,0,9,81,25,99,7,67,23,65]
+        //higher order function
+        var promise = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                if(true){
+                    resolve([13,32,64,72,10,13,8,101,37,18,11,9,12,0,9,81,25,99,7,67,23,65])
+                }
+                else{
+                    reject("reject error from promise")
+                }
+            },4000);
+        })
+
+        promise.then(
+            function(res){
+                console.log("Respose", res)
+                return res.filter(val=> val<60)
+            }).then(
+            function(res){
+                console.log("Respose", res)
+                return res.filter(val=> val*2)
+            })
+            .then(
+            function(res){
+                console.log("Respose", res)
+                
+            })
+            .catch(
+                function(err){
+                    console.log("Error", err)
+                }
+            ).finally(function(){
+                console.log("promise is complete")
+            })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

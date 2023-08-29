@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script src="assignment1.js"></script>
+    <!-- <script>
+
+        function init(){
+            const heading= document.getElementsByTagName("h1")
+        
+        heading[0].textContent="Hello, This is ranjeet"
+        }
+
+       
+       
+    </script> -->
+    <script>
+      function fun1() {
+        console.log("fun1 called");
+      }
+
+      function fun2() {
+        const heading = document.getElementsByTagName("h1");
+
+        heading[0].textContent = "Hello, This is ranjeet";
+        console.log("fun2 called");
+      }
+
+      function fun3() {
+        console.log("fun3 called");
+      }
+
+      window.addEventListener = ("load", fun2);
+      window.addEventListener = ("DOMContentLoaded", fun3);
+    </script>
+  </head>
+  <body onload="fun1()">
+    <h1></h1>
+  </body>
+</html>
